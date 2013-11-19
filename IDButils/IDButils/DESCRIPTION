@@ -20,3 +20,4 @@ Collate:
     'resortTadj.R'
     'resortMonthly.R'
     'readIDBcurrent.R'
+    'writeIDB.R'

@@ -1,10 +1,9 @@
 
 #install.packages("devtools",dep=TRUE)
-install_github(repo="devtools",username="hadley",ref="master")
+#install_github(repo="devtools",username="hadley",ref="master")
 library(devtools)
-#load_all("/data/commons/triffe/git/HMD_CS/HMDwork/Input_Templates/InputDButils")
-document("/data/commons/triffe/git/HMD_CS/HMDwork/Input_Templates/InputDButils")
-#check("/data/commons/triffe/git/HMD_CS/HMDwork/Input_Templates/InputDButils")
+install_github("IDButils","timriffe",subdir="IDButils/IDButils")
 
+document("/hdir/0/triffe/git/IDButils/IDButils/IDButils")
 
 
