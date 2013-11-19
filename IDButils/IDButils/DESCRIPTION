@@ -1,0 +1,22 @@
+Package: IDButils
+Type: Package
+Title: IDButils utility functions for HMD country specialists
+Version: 1.0
+Date: 2013-11-18
+Author: Tim Riffe
+Maintainer: Tim Riffe <tim.riffe@gmail.com>
+Description: These are helper functions developed by Tim Riffe for InputDB
+    preparation. These are unofficial convenience functions, YMMV.
+Depends:
+    R (>= 2.15)
+License: GPL-2
+LazyData: TRUE
+Collate:
+    'removeDuplicates.R'
+    'resortBirths.R'
+    'resortDeaths.R'
+    'resortLDB.R'
+    'resortPop.R'
+    'resortTadj.R'
+    'resortMonthly.R'
+    'readIDBcurrent.R'

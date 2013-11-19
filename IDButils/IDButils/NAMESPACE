@@ -1,0 +1,8 @@
+export(readIDBcurrent)
+export(removeDuplicates)
+export(resortBirths)
+export(resortDeaths)
+export(resortLDB)
+export(resortMonthly)
+export(resortPop)
+export(resortTadj)
