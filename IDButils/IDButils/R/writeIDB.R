@@ -12,6 +12,9 @@
 #' 
 
 writeIDB <- function(obj, path){
+  
+  obj[is.na(obj)] <- "."
+
   write.table(obj, 
     file = path, 
     sep = ",", 
