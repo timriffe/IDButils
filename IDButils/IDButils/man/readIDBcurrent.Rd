@@ -2,7 +2,7 @@
 \alias{readIDBcurrent}
 \title{\code{readIDBcurrent()} read in any IDB file to a data.frame}
 \usage{
-  readIDBcurrent(XXX = "SWE", item = "death",
+  readIDBcurrent(XXX = "SWE", item = "death", old = FALSE,
     full.path = NULL)
 }
 \arguments{
@@ -10,6 +10,8 @@
 
   \item{item}{character string; one of
   \code{c("death","pop","birth","tadj","monthly")}}
+
+  \item{old}{logical should the file come from XXX_Old?}
 
   \item{full.path}{optional. *If you're not at UCB, or if
   you're no working from the main HMD working directory
