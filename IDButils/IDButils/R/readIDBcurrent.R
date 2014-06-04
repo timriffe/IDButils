@@ -30,6 +30,7 @@ readIDBcurrent <- function(XXX = "SWE", item = "death", old = FALSE, full.path =
              sep = ",", 
              na.strings = ".", 
              header = TRUE, 
-             stringsAsFactors = FALSE)
+             stringsAsFactors = FALSE,
+             strip.white = TRUE)
   invisible(obj)
 }
