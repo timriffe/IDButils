@@ -6,9 +6,9 @@
 #' 
 #' @param RR a vector of age-period count data, in in single ages, including the open age group, not including TOT or UNK. (demo_magec, if EUROSTAT is the source)
 #' @param VV a vector of the same length as RR for count data in vertical parallelograms, i.e. 'age reached during the year'. excl TOT and UNK (demo_mager, if EUROSTAT is the source)
-
-#' @return a list containing elements TL and TU. TL is 1 element longer than TU
 #' 
+#' @return A data.frame with elements Age, Lexis and Deaths
+#'  
 #' @export 
 RRVV2TLTU <- function(RR, VV){
   # assuming ages organized in same way
@@ -16,6 +16,8 @@ RRVV2TLTU <- function(RR, VV){
   n  <- length(RR)
   TU <- cumsum(RR - VV)
   TL <- c((RR - TU)[-n], RR[n])
-  list(TL = TL, TU = TU)
+  data.frame(Age = c(1:length(TL)-1,1:length(TU)-1),
+             Lexis = c(rep("TL",length(TL)),rep("TU",length(TU))),
+             Deaths=c(TL,TU))
 }
 

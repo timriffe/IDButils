@@ -15,8 +15,7 @@
   the source)}
 }
 \value{
-  a list containing elements TL and TU. TL is 1 element
-  longer than TU
+  A data.frame with elements Age, Lexis and Deaths
 }
 \description{
   This takes advantage of the fact that age 0 VV is
