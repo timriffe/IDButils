@@ -11,13 +11,15 @@
 #' 
 
 readLDB <- function(ldb.path){
-  LDBobj        <- read.table(ldb.path, header = FALSE, sep = ",", 
-    col.names = c("Year", "Age", "Lexis", "Cohort", "Population", "Deaths"))
-  LDBobj[LDBobj == -1] <- NA
-  LDBobj$Lexis  <- ifelse(LDBobj$Lexis == 1, "TL","TU")
-  sex           <- unlist(strsplit(rev(unlist(strsplit(ldb.path,split="/")))[1],split=""))[1]
-  LDBobj$Sex    <- sex
-  LDBobj
+  if (file.exists(ldb.path)){
+    LDBobj        <- read.table(ldb.path, header = FALSE, sep = ",", 
+      col.names = c("Year", "Age", "Lexis", "Cohort", "Population", "Deaths"))
+    LDBobj[LDBobj == -1] <- NA
+    LDBobj$Lexis  <- ifelse(LDBobj$Lexis == 1, "TL","TU")
+    sex           <- unlist(strsplit(rev(unlist(strsplit(ldb.path,split="/")))[1],split=""))[1]
+    LDBobj$Sex    <- sex
+    return(LDBobj)
+  }
 }
 
 
